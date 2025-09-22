@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1758560600,
+	"version": 1758582046,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -17,8 +17,8 @@
 		"images/moneda1-sheet0.png",
 		"images/moneda1-sheet1.png",
 		"images/dado-sheet0.png",
-		"images/titulo-sheet0.png",
-		"images/titulo-sheet1.png",
+		"images/tituloprincipal2-sheet0.png",
+		"images/tituloprincipal2-sheet1.png",
 		"images/titulo2-sheet0.png",
 		"images/titulo3-sheet0.png",
 		"images/titulo4-sheet0.png",
@@ -48,6 +48,9 @@
 		"images/back-sheet0.png",
 		"images/back-sheet1.png",
 		"images/overlay.png",
+		"images/select-sheet0.png",
+		"images/tituloprincipal1-sheet0.png",
+		"images/fondogold.png",
 		"media/curar.m4a",
 		"media/curar.ogg",
 		"media/golpe.m4a",

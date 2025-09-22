@@ -21,6 +21,7 @@ body {
 }
 
 #texto {
+	font-family: 'PixelImpact';
 	text-decoration: none;
 	background-color: transparent;
 	border: none;
