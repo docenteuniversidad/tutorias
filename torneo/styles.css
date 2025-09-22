@@ -32,14 +32,14 @@ body {
 }
 
 ::placeholder {
-	color: rgb(39, 17, 73);
+	color: rgb(82, 36, 154);
 	opacity: 1;
 }
 
 :-ms-input-placeholder {
-	color: #271149;
+	color: rgb(82, 36, 154);
 }
 
 ::-ms-input-placeholder {
-	color: #271149;
+	color: rgb(82, 36, 154);
 }
