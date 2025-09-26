@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1758582860,
+	"version": 1758918895,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -51,6 +51,8 @@
 		"images/select-sheet0.png",
 		"images/tituloprincipal1-sheet0.png",
 		"images/fondogold.png",
+		"images/moneda2-sheet0.png",
+		"images/moneda2-sheet1.png",
 		"media/curar.m4a",
 		"media/curar.ogg",
 		"media/golpe.m4a",

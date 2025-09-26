@@ -15218,6 +15218,26 @@ cr.system_object.prototype.loadFromJSON = function (o)
 	};
 })();
 cr.shaders = {};
+cr.shaders["brightness"] = {src: ["varying mediump vec2 vTex;",
+"uniform lowp sampler2D samplerFront;",
+"uniform lowp float brightness;",
+"void main(void)",
+"{",
+"lowp vec4 front = texture2D(samplerFront, vTex);",
+"lowp float a = front.a;",
+"if (a != 0.0)",
+"front.rgb /= front.a;",
+"front.rgb += (brightness - 1.0);",
+"front.rgb *= a;",
+"gl_FragColor = front;",
+"}"
+].join("\n"),
+	extendBoxHorizontal: 0,
+	extendBoxVertical: 0,
+	crossSampling: false,
+	preservesOpaqueness: true,
+	animated: false,
+	parameters: [["brightness", 0, 1]] }
 ;
 ;
 cr.plugins_.Audio = function(runtime)
@@ -27130,20 +27150,20 @@ cr.behaviors.wrap = function(runtime)
 	};
 }());
 cr.getObjectRefTable = function () { return [
-	cr.plugins_.Audio,
-	cr.plugins_.Browser,
 	cr.plugins_.CSS_import,
 	cr.plugins_.Keyboard,
-	cr.plugins_.Mouse,
 	cr.plugins_.gamepad,
-	cr.plugins_.Text,
-	cr.plugins_.TiledBg,
+	cr.plugins_.Mouse,
 	cr.plugins_.Sprite,
+	cr.plugins_.TiledBg,
 	cr.plugins_.Tilemap,
 	cr.plugins_.Touch,
 	cr.plugins_.Spritefont2,
+	cr.plugins_.Text,
 	cr.plugins_.TextBox,
 	cr.plugins_.WebStorage,
+	cr.plugins_.Audio,
+	cr.plugins_.Browser,
 	cr.behaviors.scrollto,
 	cr.behaviors.Sin,
 	cr.behaviors.Rotate,
@@ -27187,12 +27207,19 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Audio.prototype.acts.Stop,
 	cr.system_object.prototype.acts.SubVar,
 	cr.plugins_.Tilemap.prototype.acts.SetOpacity,
+	cr.plugins_.Sprite.prototype.acts.SetEffectParam,
+	cr.plugins_.Sprite.prototype.acts.SetAnimSpeed,
+	cr.plugins_.Sprite.prototype.cnds.CompareFrame,
+	cr.plugins_.Sprite.prototype.cnds.CompareWidth,
+	cr.plugins_.Sprite.prototype.acts.SetWidth,
+	cr.plugins_.Sprite.prototype.exps.Width,
+	cr.plugins_.Sprite.prototype.acts.SetHeight,
+	cr.plugins_.Sprite.prototype.exps.Height,
 	cr.plugins_.Sprite.prototype.acts.SetY,
 	cr.plugins_.Sprite.prototype.exps.Y,
 	cr.plugins_.Tilemap.prototype.acts.MoveToTop,
 	cr.plugins_.Browser.prototype.acts.RequestFullScreen,
 	cr.system_object.prototype.cnds.Repeat,
-	cr.plugins_.Sprite.prototype.acts.SetAnimSpeed,
 	cr.system_object.prototype.exps.loopindex,
 	cr.system_object.prototype.acts.SetGroupActive,
 	cr.plugins_.Sprite.prototype.acts.SetPos,
